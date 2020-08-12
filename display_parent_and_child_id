@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <sys/types.h> 
+#include <unistd.h> 
+int main()
+{
+    int p;
+    p=fork();
+    if(p==0)
+    printf("child process id is %d\n",getpid());
+    else
+    printf("parent process id is %d\n",getpid());
+
+    return 0;
+}
